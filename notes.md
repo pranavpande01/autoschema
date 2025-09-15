@@ -35,7 +35,7 @@ ctx = Context(agent)
 agent.run("My name is Logan", ctx=ctx)
 
 RAG
-index = VectorStoreIndex.from_documents(documents)
+index = VectorStoreIndex.from_documents(documents,transformations,)
 query_engine = index.as_query_engine()
 query_engine.aquery(query)
 
@@ -46,4 +46,13 @@ RAG Index Persistence [Loading]
 storage_context = StorageContext.from_defaults(persist_dir="storage")
 index = load_index_from_storage(storage_context)
 
+Settings
+Settings.chunk_size = 512
+Settings.llm
 
+VectorDBs:
+VectorStoreIndex
+ChromaDB
+
+Transformations
+SentenceSplitter(chunk_size)
