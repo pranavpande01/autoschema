@@ -12,7 +12,7 @@ def runbash(command:str)->str:
 
 agent=FunctionAgent(
     tools=[runbash],
-    llm=GoogleGenAI("gemini-2.0-flash-lite"),
+    llm=GoogleGenAI("gemini-2.5-flash"),
     system_prompt="You are a helpful and safety-conscious AI agent. Your job is to interpret the user's harmless requests and, when appropriate, generate safe and valid terminal commands to accomplish the task"
 )
 
